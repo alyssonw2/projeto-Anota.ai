@@ -1,9 +1,9 @@
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul  class="navbar-nav  sidebar  accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <a onclick="Navigate.Logado()" class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-text mx-3"> PAINEL </div>
+                <div class="sidebar-brand-text mx-3"> <img alt="" nitro-lazy-src="https://cdn-flblj.nitrocdn.com/JXfFneDaIzscTELLyszhBWcCRNwBbiGX/assets/static/optimized/rev-71f2daf/home/wp-content/uploads/2021/12/logo.svg" class="attachment-medium size-medium ls-is-cached lazyloaded" nitro-lazy-empty="" id="MzA2OjE0MA==-1" src="https://cdn-flblj.nitrocdn.com/JXfFneDaIzscTELLyszhBWcCRNwBbiGX/assets/static/optimized/rev-71f2daf/home/wp-content/uploads/2021/12/logo.svg" width="102" height="31"> </div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -30,7 +30,6 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Usuários:</h6>
                         <a hidden class="collapse-item" onclick="Navigate.NovoGrupo()" href="#NovoGrupo">Novo Grupo</a>
                         <a hidden class="collapse-item" onclick="Navigate.solicitacoes()" href="#solicitacoes">Solicitações </a>
 
@@ -62,11 +61,31 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a onclick="N.chat()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Whatsapp</span>
+                </a>
+                <div hidden id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Controle mensagens:</h6>
+                        <a class="collapse-item" onclick="Navigate.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
+                        <a class="collapse-item" onclick="Navigate.Agendadas()" href="#">Aguardando envio</a>
+
+                        <a class="collapse-item" onclick="Navigate.linhadeTempo()" href="#">Enviadas </a>
+                        
+                    </div>
+                </div>
+            </li>
+            
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            <div hidden class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
     
@@ -230,7 +249,7 @@
             <!-- End of Main Content -->
     
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer hidden class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy;  2022</span>

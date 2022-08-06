@@ -1,460 +1,244 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container bootstrap snippets bootdey">
-    <div class="tile tile-alt" id="messages-main">
-        <div class="ms-menu">
-            <div class="ms-user clearfix">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar pull-left">
-                <div>Signed in as <br> m-hollaway@gmail.com</div>
-            </div>
-            
-            <div class="p-15">
-                <div class="dropdown">
-                    <a class="btn btn-primary btn-block" href="" data-toggle="dropdown">Messages <i class="caret m-l-5"></i></a>
-    
-                    <ul class="dropdown-menu dm-icon w-100">
-                        <li><a href=""><i class="fa fa-envelope"></i> Messages</a></li>
-                        <li><a href=""><i class="fa fa-users"></i> Contacts</a></li>
-                        <li><a href=""><i class="fa fa-format-list-bulleted"> </i>Todo Lists</a></li>
-                    </ul>
+<section style="height: 100vh;">
+    <div class="">
+      <div class="row">
+        <div class="col-md-12">
+          <div  id="chat3" style="border-radius: 15px; height: 200px">
+            <div class="card-body" style="height: 100vh;">
+              <div class="row">
+                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+                  <div class="p-3" style="overflow: auto ; height: 100vh;">
+                    <div class="input-group rounded mb-3">
+                      <input type="search" class="form-control rounded" placeholder="Filtrar" aria-label="Search"
+                        aria-describedby="search-addon" />
+                      <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </div>
+  
+                    <div data-mdb-perfect-scrollbar="true" >
+                      <ul class="list-unstyled mb-0">
+                        <li class="p-2 border-bottom">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-success badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Marie Horwitz</p>
+                                <p class="small text-muted">Hello, Are you there?</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">Just now</p>
+                              <span class="badge bg-danger rounded-pill float-end">3</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2 border-bottom">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-warning badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Alexa Chung</p>
+                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">5 mins ago</p>
+                              <span class="badge bg-danger rounded-pill float-end">2</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2 border-bottom">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-success badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Danny McChain</p>
+                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">Yesterday</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2 border-bottom">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-danger badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Ashley Olsen</p>
+                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">Yesterday</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2 border-bottom">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-warning badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Kate Moss</p>
+                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">Yesterday</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2">
+                          <a href="#!" class="d-flex justify-content-between">
+                            <div class="d-flex flex-row">
+                              <div>
+                                <img
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                  alt="avatar" class="d-flex align-self-center me-3" width="60">
+                                <span class="badge bg-success badge-dot"></span>
+                              </div>
+                              <div class="pt-1">
+                                <p class="fw-bold mb-0">Ben Smith</p>
+                                <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                              </div>
+                            </div>
+                            <div class="pt-1">
+                              <p class="small text-muted mb-1">Yesterday</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                  </div>
+  
                 </div>
+  
+                <div class="col-md-6 col-lg-7 col-xl-8" style="overflow: auto ; height: 100%;">
+  
+                  <div class="pt-3 pe-3" data-mdb-perfect-scrollbar="true"
+                    style="position: relative; height: 400px">
+  
+                    <div class="d-flex flex-row justify-content-start">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                      <div>
+                        <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Lorem ipsum
+                          dolor
+                          sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore
+                          magna aliqua.</p>
+                        <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row justify-content-end">
+                      <div>
+                        <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Ut enim ad minim veniam,
+                          quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                      </div>
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                    </div>
+  
+                    <div class="d-flex flex-row justify-content-start">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                      <div>
+                        <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">Duis aute
+                          irure
+                          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row justify-content-end">
+                      <div>
+                        <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Excepteur sint occaecat
+                          cupidatat
+                          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM | Aug 13</p>
+                      </div>
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                    </div>
+  
+                   
+  
+                  </div>
+  
+                  <div  class="text-muted d-flex justify-content-start align-items-center  pt-3 mt-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                      alt="avatar 3" style="width: 40px; height: 100%;">
+                    <input type="text" class="form-control form-control-lg" id="exampleFormControlInput2"
+                      placeholder="Digite sua mensagem">
+                    <a class="ms-1 text-muted" href="#!"><i class="fas fa-paperclip"></i></a>
+                    <a class="ms-3 text-muted" href="#!"><i class="fas fa-smile"></i></a>
+                    <a class="ms-3" href="#!"><i class="fas fa-paper-plane"></i></a>
+                  </div>
+  
+                </div>
+                
+                    
+                
+               
+              </div>
+  
             </div>
-            
-            <div class="list-group lg-alt">
-                <a class="list-group-item media" href="">
-                    <div class="pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <small class="list-group-item-heading">Davil Parnell</small>
-                        <small class="list-group-item-text c-gray">Fierent fastidii recteque ad pro</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Ann Watkinson</div>
-                        <small class="list-group-item-text c-gray">Cum sociis natoque penatibus </small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Marse Walter</div>
-                        <small class="list-group-item-text c-gray">Suspendisse sapien ligula</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="lv-avatar pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Jeremy Robbins</div>
-                        <small class="list-group-item-text c-gray">Phasellus porttitor tellus nec</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="lv-avatar pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Reginald Horace</div>
-                        <small class="list-group-item-text c-gray">Quisque consequat arcu eget</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Shark Henry</div>
-                        <small class="list-group-item-text c-gray">Nam lobortis odio et leo maximu</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Paul Van Dack</div>
-                        <small class="list-group-item-text c-gray">Nam posuere purus sed velit auctor sodales</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="lv-avatar pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">James Anderson</div>
-                        <small class="list-group-item-text c-gray">Vivamus imperdiet sagittis quam</small>
-                    </div>
-                </a>
-                
-                <a class="list-group-item media" href="">
-                    <div class="lv-avatar pull-left">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="img-avatar">
-                    </div>
-                    <div class="media-body">
-                        <div class="list-group-item-heading">Kane Williams</div>
-                        <small class="list-group-item-text c-gray">Suspendisse justo nulla luctus nec</small>
-                    </div>
-                </a>
-            </div>
-    
-            
+          </div>
+  
         </div>
-        
-        <div class="ms-body">
-            <div class="action-header clearfix">
-                <div class="visible-xs" id="ms-menu-trigger">
-                    <i class="fa fa-bars"></i>
-                </div>
-                
-                <div class="pull-left hidden-xs">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar m-r-10">
-                    <div class="lv-avatar pull-left">
-                        
-                    </div>
-                    <span>David Parbell</span>
-                </div>
-                 
-                <ul class="ah-actions actions">
-                    <li>
-                        <a href="">
-                            <i class="fa fa-trash"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-check"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-clock-o"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" data-toggle="dropdown" aria-expanded="true">
-                            <i class="fa fa-sort"></i>
-                        </a>
-            
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li>
-                                <a href="">Latest</a>
-                            </li>
-                            <li>
-                                <a href="">Oldest</a>
-                            </li>
-                        </ul>
-                    </li>                             
-                    <li class="dropdown">
-                        <a href="" data-toggle="dropdown" aria-expanded="true">
-                            <i class="fa fa-bars"></i>
-                        </a>
-            
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li>
-                                <a href="">Refresh</a>
-                            </li>
-                            <li>
-                                <a href="">Message Settings</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-    
-            <div class="message-feed media">
-                <div class="pull-left">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:00</small>
-                </div>
-            </div>
-            
-            <div class="message-feed right">
-                <div class="pull-right">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:30</small>
-                </div>
-            </div>
-            
-            <div class="message-feed media">
-                <div class="pull-left">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Etiam ex arcumentum
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:33</small>
-                </div>
-            </div>
-            
-            <div class="message-feed right">
-                <div class="pull-right">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes,
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:10</small>
-                </div>
-            </div>
-            
-            <div class="message-feed media">
-                <div class="pull-left">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ac tortor ut elit sodales varius. Mauris id ipsum id mauris malesuada tincidunt. Vestibulum elit massa, pulvinar at sapien sed, luctus vestibulum eros. Etiam finibus tristique ante, vitae rhoncus sapien volutpat eget
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 10:24</small>
-                </div>
-            </div>
-            
-            <div class="msb-reply">
-                <textarea placeholder="What's on your mind..."></textarea>
-                <button><i class="fa fa-paper-plane-o"></i></button>
-            </div>
-        </div>
+      </div>
+  
     </div>
-</div>
+  </section>
 
 
 <style>
-    body {
-    font-family: Roboto,sans-serif;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #767676;
-    background-color: #edecec;
-}
 
-#messages-main {
-    position: relative;
-    margin: 0 auto;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-#messages-main:after, #messages-main:before {
-    content: " ";
-    display: table;
-}
-#messages-main .ms-menu {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-right: 1px solid #eee;
-    padding-bottom: 50px;
-    height: 100%;
-    width: 240px;
-    background: #fff;
-}
-@media (min-width:768px) {
-    #messages-main .ms-body {
-    padding-left: 240px;
-}
-}@media (max-width:767px) {
-    #messages-main .ms-menu {
-    height: calc(100% - 58px);
-    display: none;
-    z-index: 1;
-    top: 58px;
-}
-#messages-main .ms-menu.toggled {
-    display: block;
-}
-#messages-main .ms-body {
-    overflow: hidden;
-}
-}
-#messages-main .ms-user {
-    padding: 15px;
-    background: #f8f8f8;
-}
-#messages-main .ms-user>div {
-    overflow: hidden;
-    padding: 3px 5px 0 15px;
-    font-size: 11px;
-}
-#messages-main #ms-compose {
-    position: fixed;
-    bottom: 120px;
-    z-index: 1;
-    right: 30px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-}
-#ms-menu-trigger {
-    user-select: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    padding-right: 10px;
-    padding-top: 19px;
-}
-#ms-menu-trigger i {
-    font-size: 21px;
-}
-#ms-menu-trigger.toggled i:before {
-    content: '\f2ea'
-}
-.fc-toolbar:before, .login-content:after {
-    content: ""
-}
-.message-feed {
-    padding: 20px;
-}
-#footer, .fc-toolbar .ui-button, .fileinput .thumbnail, .four-zero, .four-zero footer>a, .ie-warning, .login-content, .login-navigation, .pt-inner, .pt-inner .pti-footer>a {
-    text-align: center;
-}
-.message-feed.right>.pull-right {
-    margin-left: 15px;
-}
-.message-feed:not(.right) .mf-content {
-    background: #03a9f4;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-.message-feed.right .mf-content {
-    background: #eee;
-}
-.mf-content {
-    padding: 12px 17px 13px;
-    border-radius: 2px;
-    display: inline-block;
-    max-width: 80%
-}
-.mf-date {
-    display: block;
-    color: #B3B3B3;
-    margin-top: 7px;
-}
-.mf-date>i {
-    font-size: 14px;
-    line-height: 100%;
-    position: relative;
-    top: 1px;
-}
-.msb-reply {
-    box-shadow: 0 -20px 20px -5px #fff;
-    position: relative;
-    margin-top: 30px;
-    border-top: 1px solid #eee;
-    background: #f8f8f8;
-}
-.four-zero, .lc-block {
-    box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
-}
-.msb-reply textarea {
-    width: 100%;
-    font-size: 13px;
-    border: 0;
-    padding: 10px 15px;
-    resize: none;
-    height: 60px;
-    background: 0 0;
-}
-.msb-reply button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 0;
-    height: 100%;
-    width: 60px;
-    font-size: 25px;
-    color: #2196f3;
-    background: 0 0;
-}
-.msb-reply button:hover {
-    background: #f2f2f2;
-}
-.img-avatar {
-    height: 37px;
-    border-radius: 2px;
-    width: 37px;
-}
-.list-group.lg-alt .list-group-item {
-    border: 0;
-}
-.p-15 {
-    padding: 15px!important;
-}
-.btn:not(.btn-alt) {
-    border: 0;
-}
-.action-header {
-    position: relative;
-    background: #f8f8f8;
-    padding: 15px 13px 15px 17px;
-}
-.ah-actions {
-    z-index: 3;
-    float: right;
-    margin-top: 7px;
-    position: relative;
-}
-.actions {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.actions>li {
-    display: inline-block;
-}
-
-.actions:not(.a-alt)>li>a>i {
-    color: #939393;
-}
-.actions>li>a>i {
-    font-size: 20px;
-}
-.actions>li>a {
-    display: block;
-    padding: 0 10px;
-}
-.ms-body{
-    background:#fff;    
-}
-#ms-menu-trigger {
-    user-select: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    padding-right: 10px;
-    padding-top: 19px;
-    cursor:pointer;
-}
-#ms-menu-trigger, .message-feed.right {
-    text-align: right;
-}
-#ms-menu-trigger, .toggle-switch {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-}
+  #chat3 .form-control {
+    border-color: transparent;
+    }
+    
+    #chat3 .form-control:focus {
+    border-color: transparent;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+    }
+    
+    .badge-dot {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-left: 2.9rem;
+    margin-top: -.75rem;
+    }
 </style>

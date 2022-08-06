@@ -22,5 +22,9 @@ const N = {
     },
     async Login() {
       $("body")[0].innerHTML = await P.Login()
+    },
+    async chat(){
+      $("#Conteudo")[0].innerHTML = ''
+      $("#Conteudo").append( await M.chat())
     }
   };

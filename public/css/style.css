@@ -56,3 +56,9 @@ form.user .form-control-user {
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
 }
+
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+  background-color: #ff9114;
+  color: white;
+}
