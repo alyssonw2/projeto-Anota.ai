@@ -1,5 +1,6 @@
 import { existsSync, unlinkSync, readdir } from 'fs'
 import { join } from 'path'
+import {io} from './websoket.js'
 import pino from 'pino'
 import makeWASocket, {
     makeWALegacySocket,
@@ -41,7 +42,8 @@ const shouldReconnect = (sessionId) => {
 
         console.log('Reconnecting...', { attempts, sessionId })
         retries.set(sessionId, attempts)
-
+        io.emit("updateqr",{"message":"Conectado"})
+        
         return true
     }
 
@@ -84,10 +86,9 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
     wa.ev.on('messages.upsert', async (m) =>{
         console.log(m)
         if(m.type == 'notify'){
-            await Logica(m.messages[0].key.remoteJid, m.messages[0].message, m.messages[0].pushName)
+            io.emit("messageNotify",m)
         }
     })
-
     wa.ev.on('chats.set', ({ chats }) => {
         if (isLegacy) {
             store.chats.insertIfAbsent(...chats)
@@ -95,21 +96,9 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
     })
 
     // Automatically read incoming messages, uncomment below codes to enable this behaviour
-    /*
-    wa.ev.on('messages.upsert', async (m) => {
-        const message = m.messages[0]
-
-        if (!message.key.fromMe && m.type === 'notify') {
-            await delay(1000)
-
-            if (isLegacy) {
-                await wa.chatRead(message.key, 1)
-            } else {
-                await wa.sendReadReceipt(message.key.remoteJid, message.key.participant, [message.key.id])
-            }
-        }
-    })
-    */
+    
+  
+    
 
     wa.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update
@@ -117,6 +106,7 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
 
         if (connection === 'open') {
             retries.delete(sessionId)
+             
         }
 
         if (connection === 'close') {
@@ -140,9 +130,8 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
             if (res && !res.headersSent) {
                 try {
                     const qr = await toDataURL(update.qr)
-
+                    io.emit("updateqr",qr)
                     response(res, 200, true, 'QR code received, please scan the QR code.', { qr })
-
                     return
                 } catch {
                     response(res, 500, false, 'Unable to create QR code.')

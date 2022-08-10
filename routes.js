@@ -5,6 +5,7 @@ import groupsRoute from './routes/groupsRoute.js'
 import response from './response.js'
 import cors from 'cors';
 import app from './routes/app.js'
+
 const router = Router()
 router.use(cors())
 router.use('/sessions', sessionsRoute)

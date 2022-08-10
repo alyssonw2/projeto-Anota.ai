@@ -59,6 +59,30 @@ form.user .form-control-user {
 
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #ff9114;
+  background-color: #ff6700;
   color: white;
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #ff6700;
+  border-color: #ff6700;
+}
+
+.btn-primary:focus {
+  color: #fff;
+  background-color: #0e920e;
+  border-color: #0e920e;
+  box-shadow: 0 0 0 .2rem rgb(14, 146, 14);
+}
+
+.form-check-input:checked {
+  background-color: #ff6b06;
+  border-color: #f75c00;
+}
+.form-check-input:focus {
+  border-color: #f7a200;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(253, 126, 13, 0.25);
 }

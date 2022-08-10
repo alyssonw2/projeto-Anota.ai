@@ -1,96 +1,180 @@
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul  class="navbar-nav  sidebar  accordion" id="accordionSidebar">
-            <!-- Sidebar - Brand -->
-            <a onclick="Navigate.Logado()" class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-text mx-3"> <img alt="" nitro-lazy-src="https://cdn-flblj.nitrocdn.com/JXfFneDaIzscTELLyszhBWcCRNwBbiGX/assets/static/optimized/rev-71f2daf/home/wp-content/uploads/2021/12/logo.svg" class="attachment-medium size-medium ls-is-cached lazyloaded" nitro-lazy-empty="" id="MzA2OjE0MA==-1" src="https://cdn-flblj.nitrocdn.com/JXfFneDaIzscTELLyszhBWcCRNwBbiGX/assets/static/optimized/rev-71f2daf/home/wp-content/uploads/2021/12/logo.svg" width="102" height="31"> </div>
-            </a>
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a onclick="Navigate.Logado()" class="nav-link" href="#">
-                    <ion-icon name="wifi-outline"></ion-icon>
-                    <span> Conexão </span></a>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-    
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Controles
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Misterchef</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-    
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Controles</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a hidden class="collapse-item" onclick="Navigate.NovoGrupo()" href="#NovoGrupo">Novo Grupo</a>
-                        <a hidden class="collapse-item" onclick="Navigate.solicitacoes()" href="#solicitacoes">Solicitações </a>
-
-
-                        <a  class="collapse-item" href="#solicitacoes" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >Configurações </a>
-
-                      
-
-                        <a hidden class="collapse-item" onclick="Navigate.whatsappBanidos()" href="#banidos">Whatsapps Banidos </a>
-                    </div>
-                </div>
-            </li>
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a onclick="N.anotaai()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Anota.ai</span>
-                </a>
-                <div hidden id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Controle mensagens:</h6>
-                        <a class="collapse-item" onclick="Navigate.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
-                        <a class="collapse-item" onclick="Navigate.Agendadas()" href="#">Aguardando envio</a>
-
-                        <a class="collapse-item" onclick="Navigate.linhadeTempo()" href="#">Enviadas </a>
-                        
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a onclick="N.chat()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Whatsapp</span>
-                </a>
-                <div hidden id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Controle mensagens:</h6>
-                        <a class="collapse-item" onclick="Navigate.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
-                        <a class="collapse-item" onclick="Navigate.Agendadas()" href="#">Aguardando envio</a>
-
-                        <a class="collapse-item" onclick="Navigate.linhadeTempo()" href="#">Enviadas </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <div class="offcanvas-body">
             
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-            <!-- Heading -->
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div hidden class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <ul  class="navbar-nav  sidebar  accordion" id="accordionSidebar">
+                    <!-- Sidebar - Brand -->
+                    <a onclick="N.Logado()" class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                        <div class="sidebar-brand-text mx-3"> <img alt="" nitro-lazy-src="https://dev.mistercheff.com.br/portal/images/logo_mistercheff.png"  nitro-lazy-empty="" id="MzA2OjE0MA==-1" src="https://dev.mistercheff.com.br/portal/images/logo_mistercheff.png" width="50" > </div>
+                    </a>
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item">
+                        <a onclick="N.Logado()" class="nav-link" href="#">
+                            <ion-icon name="wifi-outline"></ion-icon>
+                            <span> Conexão </span></a>
+                    </li>
+        
+                    
+        
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+            
+                    <!-- Heading -->
+                    <div class="sidebar-heading">
+                        Controles
+                    </div>
+            
+                    <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Controles</span>
+                        </a>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <a hidden class="collapse-item" onclick="N.NovoGrupo()" href="#NovoGrupo">Novo Grupo</a>
+                                <a hidden class="collapse-item" onclick="N.solicitacoes()" href="#solicitacoes">Solicitações </a>
+        
+        
+                                <a  class="collapse-item" href="#solicitacoes" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >Configurações </a>
+        
+                              
+        
+                                <a hidden class="collapse-item" onclick="N.whatsappBanidos()" href="#banidos">Whatsapps Banidos </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Nav Item - Utilities Collapse Menu -->
+                    <li class="nav-item">
+                        <a onclick="N.misterchef()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
+                            aria-expanded="true" aria-controls="collapseUtilities">
+                            <ion-icon name="log-in-sharp"></ion-icon>
+                            <span>Misterchef</span>
+                        </a>
+                        <div hidden id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Controle mensagens:</h6>
+                                <a class="collapse-item" onclick="N.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
+                                <a class="collapse-item" onclick="N.Agendadas()" href="#">Aguardando envio</a>
+        
+                                <a class="collapse-item" onclick="N.linhadeTempo()" href="#">Enviadas </a>
+                                
+                            </div>
+                        </div>
+                    </li>
+        
+                    <!-- Nav Item - Utilities Collapse Menu -->
+                    <li class="nav-item">
+                        <a onclick="N.mensagens()" class="nav-link collapsed" href="#" data-toggle="" data-target="#boot"
+                            aria-expanded="true" aria-controls="boot">
+                            
+                            <ion-icon class="fas" name="logo-android"></ion-icon>
+                            <span>Boot.ai</span>
+                        </a>
+                        <div hidden id="boot" class="collapse" aria-labelledby="headingUtilities"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Controle mensagens:</h6>
+                                <a class="collapse-item" onclick="N.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
+                                <a class="collapse-item" onclick="N.Agendadas()" href="#">Aguardando envio</a>
+        
+                                <a class="collapse-item" onclick="N.linhadeTempo()" href="#">Enviadas </a>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="FW.OpenWhatsW()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
+                            aria-expanded="true" aria-controls="collapseUtilities">
+                            
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                            <span>Whatsapp</span>
+                        </a>
+                        <div hidden id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Controle mensagens:</h6>
+                                <a class="collapse-item" onclick="Navigate.novaMensagem()" href="#Mensagem">Nova Mensagem</a>
+                                <a class="collapse-item" onclick="Navigate.Agendadas()" href="#">Aguardando envio</a>
+        
+                                <a class="collapse-item" onclick="Navigate.linhadeTempo()" href="#">Enviadas </a>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    
+        
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <!-- Heading -->
+                    <!-- Sidebar Toggler (Sidebar) -->
+                    <div hidden class="text-center d-none d-md-inline">
+                        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    </div>
+            
+                </ul>
+
             </div>
-    
-        </ul>
+          </div>
         <!-- End of Sidebar -->
+
+
+
+  <!-- fab placed to the bottom and start and on the bottom edge of the content overlapping footer with a list to the right -->
+  <ion-fab style="position: fixed; bottom: 50px; left: 50px;">
+    <ion-fab-button >
+        <ion-icon name="menu-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <a onclick="N.Logado()" class="nav-link" href="#">
+            <ion-icon name="wifi-outline"></ion-icon>
+            </a>
+
+      </ion-fab-button>
+      <ion-fab-button>
+        <a onclick="N.misterchef()" class="nav-link" href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a onclick="FW.OpenWhatsW()" class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseUtilities"
+        aria-expanded="true" aria-controls="collapseUtilities">
+        
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        
+        </a>
+
+      </ion-fab-button>
+      <ion-fab-button>
+        <a onclick="N.mensagens()" class="nav-link collapsed" href="#" data-toggle="" data-target="#boot"
+        aria-expanded="true" aria-controls="boot">
+        
+        <ion-icon class="fas" name="logo-android"></ion-icon>
+        
+      </a>
+
+      </ion-fab-button>
+      <ion-fab-button  data-toggle="collapse" data-target="#collapseTwo"
+      aria-expanded="true" aria-controls="collapseTwo">
+      <ion-icon name="construct-outline"></ion-icon>
+
+      </ion-fab-button>
+
+
+     
+    </ion-fab-list>
+  </ion-fab>
     
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -99,7 +183,7 @@
             <div id="content">
     
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav hidden class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
     
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -260,7 +344,6 @@
     
         </div>
         <!-- End of Content Wrapper -->
-    
     </div>
     <!-- End of Page Wrapper -->
     
@@ -283,7 +366,7 @@
                 <div class="modal-body"> Se realmente deseja executar o log-out cliente em sair </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar   </button>
-                    <a class="btn btn-primary" data-dismiss="modal"  onclick="Func.Logout()" href="#">Sair</a>
+                    <a class="btn btn-primary" data-dismiss="modal"  onclick="F.Logout()" href="#">Sair</a>
                 </div>
             </div>
         </div>

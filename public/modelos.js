@@ -24,8 +24,8 @@ const M = {
       html = html.data;
       return html;
     },
-    async anotaai() {
-      let html = await axios.get("./modelos/anotaai/index.html");
+    async misterchef() {
+      let html = await axios.get("./modelos/misterchef/index.html");
       html = html.data;
       return html;
     },
@@ -40,5 +40,10 @@ const M = {
       html = html.replace("{{DATA}}",DATA)
       html = html.replace("{{TEXTO}}",TEXTO)
       return html;
-    }
+    },
+    async mensagens() {
+      let html = await axios.get("./modelos/mensagens/index.html");
+      html = html.data;
+      return html;
+    },
   };

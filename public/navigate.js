@@ -14,11 +14,10 @@ const N = {
       await FW.conectWhatsapp()
 
     },
-    async anotaai(){
+    async misterchef(){
       $("#Conteudo")[0].innerHTML = ''
-      $("#Conteudo").append( await M.anotaai())
-      
-      
+      $("#Conteudo").append( await M.misterchef())
+      $("#Conteudo").append( await M.offcanvas())
     },
     async Login() {
       $("body")[0].innerHTML = await P.Login()
@@ -26,5 +25,15 @@ const N = {
     async chat(){
       $("#Conteudo")[0].innerHTML = ''
       $("#Conteudo").append( await M.chat())
+      $("#Conteudo").append( await M.offcanvas())
+      $("#Conteudo").append( await M.conectarWhatsap())
+      $("#Conteudo").append( await M.offcanvas())
+      await FW.whatsappConectado()
+      await FW.conectWhatsapp()
+    },
+    async mensagens(){
+      $("#Conteudo")[0].innerHTML = ''
+      $("#Conteudo").append( await M.mensagens())
+      $("#Conteudo").append( await M.offcanvas())
     }
   };

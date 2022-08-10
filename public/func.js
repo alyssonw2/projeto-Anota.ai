@@ -61,6 +61,18 @@ const F = {
       document.body.appendChild(toast);
       return toast.present();
     },
+    async Toast(Mensagem,position,duration){
+      const toast = document.createElement('ion-toast');
+  toast.message = Mensagem;
+  toast.icon = 'information-circle',
+  toast.position = position || 'top';
+
+  document.body.appendChild(toast);
+  await toast.present();
+
+  const { role } = await toast.onDidDismiss();
+  console.log('onDidDismiss resolved with role', role);
+    },
     async VErificandoLogado() {
       if (
         localStorage.LoginAutomatico != undefined &&
@@ -206,4 +218,7 @@ let dadossuarioLogado = {
         return error
       });
     },
+    async OpenWhatsW(){
+      window.open('https://web.whatsapp.com/', '', 'height=800, width=600, left='+(window.innerWidth-600)/2);
+    }
   }
