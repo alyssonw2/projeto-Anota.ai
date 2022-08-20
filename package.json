@@ -1,5 +1,5 @@
 {
-  "name": "MisterCheff",
+  "name": "mistercheff",
   "description": "sistema de notificação e pre atendimento",
   "private": true,
   "main": "app.js",
@@ -14,16 +14,22 @@
     "url": "git+git@github.com:adiwajshing/Baileys.git"
   },
   "author": "ajdev.com.br",
-  "bugs": {
-    "url": ""
-  },
   "bin": "./app.js",
   "pkg": {
     "assets": [
-      "public/**/*"
+      "public/**/*",
+      "sessions/**/*",
+      "BotsComunicacao/**/*",
+      "controllers/**/*",
+      "examples/**/*",
+      "Media/**/*",
+      "middlewares/**/*",
+      "routes/**/*",
+      "sessions/**/*",
+      "vendor/**/*"
     ],
     "targets": [
-      "node14"
+      "node17"
     ]
   },
   "homepage": "",
