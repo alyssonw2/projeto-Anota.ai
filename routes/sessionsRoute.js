@@ -12,6 +12,6 @@ router.get('/status/:id', sessionValidator, controller.status)
 
 router.post('/add', body('id').notEmpty(), body('isLegacy').notEmpty(), requestValidator, controller.add)
 
-router.delete('/delete/:id', sessionValidator, controller.del)
+router.delete('/status/:id', sessionValidator, controller.del)
 
 export default router

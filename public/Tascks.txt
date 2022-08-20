@@ -1,0 +1,14 @@
+Intensões:
+Principais:
+Cardápio;
+Taxa de entrega e se entrega;
+Endereço do estabelecimento;
+Telefone do estabelecimento;
+Se o estabelecimento está aberto ou fechado;
+Formas de pagamento;
+Secundárias:
+Se o estabelecimento aceita reserva;
+Se tem promoções: inicialmente enviar ao cardápio pra olhar, mas futuramente enviar todos produtos que estão de: por:
+Se tem combos: listar os combos e preços
+Tempo para buscar:
+Tempo para entrega: enviar localização

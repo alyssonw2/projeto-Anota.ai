@@ -1,24 +1,44 @@
-const socket = io("http://ajdev.ddns.net:3000");
-socket.on("connection", (socket) => {
-    console.log(socket.id); // x8WIv7-mJelg7on_ALbx
-  });
+let soketLocal = io("http://localhost:4000");
+
+soketLocal.on("connection", r => {
+    console.log('socket servidor *Interno* conectado:'+r.id); // x8WIv7-mJelg7on_ALbx
+});
 // client-side
-socket.on("connect", () => {
-console.log(socket.id); // x8WIv7-mJelg7on_ALbx
-$('#Wconectado')[0].hidden = false
-$('#NumeroConectado')[0].innerHTML = 'Conectado'
+soketLocal.on("connect", r => {
+   // console.log('socket servidor *Interno* conectado:'+r.id); // x8WIv7-mJelg7on_ALbx
 });
 
-socket.on("updateqr",r=>{
-    if(r?.message == 'Conectado'){
+//Qrcode -------------------------------------------
+soketLocal.on("updateqr", r => {
+    $('#Wconectado')[0].hidden = false
+    $('#NumeroConectado')[0].innerHTML = 'Conectado'
+    if (r?.message == 'Conectado') {
         F.Mensagem("Conectado");
+        
     }
     console.log(r)
 })
-
-socket.on("messageNotify",async r =>{
-        await F.Mensagem("Nova mensagem de "+ r.messages[0].pushName)
-        console.log(r)
+//Notificação -------------------------------------------
+soketLocal.on("messageNotify", async r => {
+    await F.Mensagem("Nova mensagem de " + r.messages[0].pushName)
+    console.log(r)
 })
+//Login -------------------------------------------
+soketLocal.on("loginSistemRetorno", async r => {
+    await F.Mensagem("Nova mensagem de " + r.messages[0].pushName)
+    console.log(r)
+})
+soketLocal.on("ResponseLogin", async r =>{
+    if(r.ret.access_token != undefined){
+        localStorage.TokenAtualAcesso = r.ret.access_token
+        N.Logado()
+    }
+})
+
+async function VerificarLoginSoket(dados) {
+    await soketLocal.emit("Login",dados)
+
+}
+
 
 localStorage.notificarnovaMensagem = true

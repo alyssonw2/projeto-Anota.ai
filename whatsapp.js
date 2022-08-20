@@ -1,6 +1,6 @@
 import { existsSync, unlinkSync, readdir } from 'fs'
 import { join } from 'path'
-import {io} from './websoket.js'
+import {SoketServico_Interno} from './websoket.js'
 import pino from 'pino'
 import makeWASocket, {
     makeWALegacySocket,
@@ -9,13 +9,15 @@ import makeWASocket, {
     makeInMemoryStore,
     Browsers,
     DisconnectReason,
-    delay,
+    delay
+    
 } from '@adiwajshing/baileys'
 import { toDataURL } from 'qrcode'
 import __dirname from './dirname.js'
 import response from './response.js'
 import fs from 'fs'
-import { Logica } from './logica.js'
+import localStorage from 'local-storage';
+import { Interpretador } from './Interpretador.js'
 const sessions = new Map()
 const retries = new Map()
 
@@ -42,7 +44,7 @@ const shouldReconnect = (sessionId) => {
 
         console.log('Reconnecting...', { attempts, sessionId })
         retries.set(sessionId, attempts)
-        io.emit("updateqr",{"message":"Conectado"})
+        SoketServico_Interno.emit("updateqr",{"message":"Conectado"})
         
         return true
     }
@@ -67,7 +69,7 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
         auth: state,
         printQRInTerminal: true,
         logger,
-        browser: ['ANOTA.AI','',''],
+        browser: ['Mistercheff','',''],
     }
 
     /**
@@ -84,10 +86,8 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
 
     wa.ev.on('creds.update', saveState)
     wa.ev.on('messages.upsert', async (m) =>{
-        console.log(m)
-        if(m.type == 'notify'){
-            io.emit("messageNotify",m)
-        }
+        await Interpretador(m)
+        console.log(m.messages[0].message?.messageContextInfo)
     })
     wa.ev.on('chats.set', ({ chats }) => {
         if (isLegacy) {
@@ -103,18 +103,14 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
     wa.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update
         const statusCode = lastDisconnect?.error?.output?.statusCode
-
         if (connection === 'open') {
             retries.delete(sessionId)
-             
         }
-
         if (connection === 'close') {
             if (statusCode === DisconnectReason.loggedOut || !shouldReconnect(sessionId)) {
                 if (res && !res.headersSent) {
                     response(res, 500, false, 'Unable to create session.')
                 }
-
                 return deleteSession(sessionId, isLegacy)
             }
 
@@ -125,12 +121,11 @@ const createSession = async (sessionId, isLegacy = false, res = null) => {
                 statusCode === DisconnectReason.restartRequired ? 0 : parseInt(process.env.RECONNECT_INTERVAL ?? 0)
             )
         }
-
         if (update.qr) {
             if (res && !res.headersSent) {
                 try {
                     const qr = await toDataURL(update.qr)
-                    io.emit("updateqr",qr)
+                    SoketServico_Interno.emit("updateqr",qr)
                     response(res, 200, true, 'QR code received, please scan the QR code.', { qr })
                     return
                 } catch {
@@ -208,7 +203,7 @@ const isExists = async (session, jid, isGroup = false) => {
  */
 const sendMessage = async (session, receiver, message) => {
     try {
-        await delay(1000)
+        await delay(100)
 
         return session.sendMessage(receiver, message)
     } catch {

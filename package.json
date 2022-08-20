@@ -1,11 +1,12 @@
 {
-  "name": "Notificacao",
+  "name": "MisterCheff",
   "description": "sistema de notificação e pre atendimento",
   "private": true,
   "main": "app.js",
   "type": "module",
   "scripts": {
     "start": "node .",
+    "nodemon": "nodemon app.js",
     "start_e": "electron ."
   },
   "repository": {
@@ -36,12 +37,18 @@
     "express": "^4.17.2",
     "express-validator": "^6.14.0",
     "fix-path": "^3.0.0",
+    "form-data": "^4.0.0",
+    "local-storage": "^2.0.0",
+    "lowdb": "^3.0.0",
     "node-cleanup": "^2.1.2",
+    "nodemon": "^2.0.19",
     "pino": "^7.10.0",
     "pkg": "^5.8.0",
     "qrcode": "^1.5.0",
     "qrcode-terminal": "^0.12.0",
-    "soket.io": "^0.0.1-security"
+    "socket.io-client": "^4.5.1",
+    "soket.io": "^0.0.1-security",
+    "xyz": "^4.0.0"
   },
   "devDependencies": {
     "electron": "^20.0.1",
